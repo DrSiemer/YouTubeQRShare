@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube QR Share",
+  "short_name": "YT QR Share",
+  "description": "- Add a QR code generator to the YouTube share options -",
+  "version": "1.0.0.2",
+  "icons": { "16": "icon.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"], 
+        "js": ["qrcode.min.js", "qrshare.js"],
+        "css" : ["qrshare.css"]
+      }
+  ],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "qr.svg"
+  ]
+}

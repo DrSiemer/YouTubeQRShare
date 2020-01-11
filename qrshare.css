@@ -1,0 +1,35 @@
+#qrbutton {
+    width: 68px;
+    height: 90px;
+    vertical-align: bottom;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#qrbutton .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 2px 4px 7px 4px;
+    overflow: hidden;
+}
+#qrbutton .title {
+    margin-top: 7px;
+}
+#qrcode {
+    display: none;
+    background-color: white;
+    margin: 25px -24px 0 -24px;
+}
+#qrcode.visible {
+    display: block;
+}
+#qrcode img {
+    margin: auto;
+}
+
+@media only screen and (max-height: 600px) {
+    div#qrcode {
+        padding-bottom: 24px;
+    }
+}
