@@ -12,18 +12,18 @@ function generateQr(qrButton) {
   buttonWrapper.blur();
   let qrCode = document.getElementById('qrcode');
   if (qrCode != null) {
-  	qrCode.remove();
-  	let modal = document.querySelector('paper-dialog');
-  	modal.style.top = (parseInt(modal.style.top)+140)+"px";
+    qrCode.remove();
+    let modal = document.querySelector('paper-dialog');
+    modal.style.top = (parseInt(modal.style.top)+140)+"px";
   } else {
-	  let qrCodeDiv = document.createElement("div"); qrCodeDiv.id = 'qrcode';
-	  new QRCode(qrCodeDiv, window.location.href);
-		let insertAfter = qrButton.closest('.ytd-unified-share-panel-renderer').querySelector('#copy-link');
-		insertAfter.parentNode.insertBefore(qrCodeDiv, insertAfter.nextSibling);
-	  qrCodeDiv.classList.add('visible');
-	  let modal = document.querySelector('paper-dialog');
-  	modal.style.top = (parseInt(modal.style.top)-140)+"px";
-	}
+    let qrCodeDiv = document.createElement("div"); qrCodeDiv.id = 'qrcode';
+    new QRCode(qrCodeDiv, window.location.href);
+    let insertAfter = qrButton.closest('.ytd-unified-share-panel-renderer').querySelector('#copy-link');
+    insertAfter.parentNode.insertBefore(qrCodeDiv, insertAfter.nextSibling);
+    qrCodeDiv.classList.add('visible');
+    let modal = document.querySelector('paper-dialog');
+    modal.style.top = (parseInt(modal.style.top)-140)+"px";
+  }
 }
 
 function activateScript() {
