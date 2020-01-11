@@ -1,4 +1,4 @@
-# YouTubeQRShare
+# YouTube QR Share
 Chrome extension for sharing YouTube videos using a QR code.
 
 [Install via Chrome Web Store](https://chrome.google.com/webstore/detail/youtube-qr-share/dedjdpoloiopppkeibmendkmhanidkdd)
